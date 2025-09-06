@@ -79,7 +79,24 @@ public class PessoaRepositoryImpl implements PessoaRepository {
     }
 
     @Override
-    public void excluirID(int id) throws PessoaError {
+    public void excluirId(int id) throws PessoaError {
+    try {
+
+        Connection myql = ConexaoRepository.getconexao();
+
+        String query ="DELETE FROM pessoa WHERE id=(?)";
+        PreparedStatement ps = myql.prepareStatement(query);
+        ps.setInt(1,id);
+
+        if(ps.executeUpdate() <= 0){
+            throw new PessoaError("Não foi possivel excluir o cadastro");
+
+        }
+
+    }catch (SQLException e){
+        throw new PessoaError("Erro ao excluir um cadastro", e);
+
+    }
 
     }
 }

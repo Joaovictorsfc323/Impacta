@@ -29,4 +29,10 @@ public class PessoaService {
         return repository.listar();
 
     }
+
+    public void excluirId (int id) throws PessoaError{
+
+        PessoaRepository repository =new PessoaRepositoryImpl();
+        repository.excluirId(id);
+    }
 }

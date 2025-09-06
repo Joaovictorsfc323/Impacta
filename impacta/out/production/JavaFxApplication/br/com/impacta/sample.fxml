@@ -29,12 +29,12 @@
       <Button fx:id="buttonAdicionar" layoutX="42.0" layoutY="194.0" mnemonicParsing="false" onAction="#adicionar" text="Adicionar" />
       <Button fx:id="buttonExcluir" layoutX="190.0" layoutY="194.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
       <Button fx:id="buttonLimpar" layoutX="125.0" layoutY="194.0" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
-      <TableView layoutX="312.0" layoutY="107.0" prefHeight="200.0" prefWidth="353.0">
+      <TableView fx:id="table" layoutX="312.0" layoutY="107.0" prefHeight="200.0" prefWidth="353.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="ID" />
-          <TableColumn prefWidth="94.0" text="Nome" />
-            <TableColumn prefWidth="75.0" text="Data" />
-            <TableColumn prefWidth="75.0" text="CPF" />
+          <TableColumn fx:id="tableId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tableNome" prefWidth="94.0" text="Nome" />
+            <TableColumn fx:id="tableData" prefWidth="75.0" text="Data" />
+            <TableColumn fx:id="tableCpf" prefWidth="75.0" text="CPF" />
         </columns>
       </TableView>
    </children>

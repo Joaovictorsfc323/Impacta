@@ -11,7 +11,7 @@ public interface PessoaRepository {
 
     List<Pessoa> listar() throws PessoaError;
 
-    void excluirID(int id) throws PessoaError;
+    void excluirId(int id) throws PessoaError;
 
 
 }
